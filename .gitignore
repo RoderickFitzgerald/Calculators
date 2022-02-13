@@ -1,0 +1,2 @@
+#Ingoring any outputted files if you use >>
+*.txt
