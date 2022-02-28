@@ -49,8 +49,17 @@ def NovatedInterest():
     print("The remaining value of the vehicle to own is: $", str(round(VehiclePrice * ResiduialValue, 2)))
     print("The total cost of ownership for this vehicle is: $" + str((VehiclePrice * ResiduialValue) + TotalOwed))
 
-
-
-
-
 NovatedInterest()
+
+#The idea for this function is to take either a weekly number and output that as a whole number of a lease term.
+#This includes the ResidualValue that needs to be calculated in.
+def HowMuchToGetEffectiveCost(DesiredAmount):
+    TaxBracket_WMC = 0.345
+    InversdedResidualValue = 0.7187 #0.2813 inversed for ease calculations.
+    EffectiveWeekly = DesiredAmount + (DesiredAmount * TaxBracket_WMC) #Effective tax rebate.
+    EffectiveYearly = ((EffectiveWeekly * 52) * 5) / 0.7187
+    return round(EffectiveYearly, 2)
+
+print(tileWal)
+SacrificedAmount = 120
+print("For " + str(SacrificedAmount) + " per week, I can get a vehicle valued at $" + str(HowMuchToGetEffectiveCost(SacrificedAmount)) + " over 5 years.")
